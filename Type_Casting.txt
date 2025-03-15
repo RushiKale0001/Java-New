@@ -1,0 +1,105 @@
+Java Examples on Type Casting : 
+ 1.   Temperature Conversion (Celsius to Fahrenheit)
+In many systems, temperature is stored as an integer in Celsius, but for certain calculations, it might need to be converted to Fahrenheit and stored as a decimal value (double). Here, narrowing casting is applied automatically.
+import java.io.BufferedReader; import java.io.InputStreamReader; import java.io.IOException;
+    Code :
+public class UserInputExample {
+    public static void main(String[] args) throws IOException { BufferedReader reader = new BufferedReader(new
+        InputStreamReader(System.in)); System.out.println("Enter temperature in Celsius:); int = Float.parseInt(reader.readLine());
+    
+        double i = c;
+        double f = ( i * 9 / 5 ) + 32;
+    
+        System.out.println( c + " Fahrenheit in Celsius:" + f);
+        }
+}
+
+Output:
+    Enter temperature in Celsius: 37
+    Celsius in Fahrenheit:98.6
+
+2.   Age Input in a Survey
+In surveys, people may enter their age in years as a double (especially if it’s decimal, e.g., 25.5). However, the system might only require their age as an integer for processing. This requires narrowing casting from a double to an int.
+ 
+ code : 
+import java.util.Scanner;
+ 
+public class UserInputExample{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Enter your age:");
+        double a = scanner.nextDouble(); 
+        scanner.close();
+        
+        int b=(int) a;
+        
+        System.out.println("Your age:"+b);
+    }
+}
+ 
+ 
+Output: Enter your age: 22.5
+        Your age:22
+
+
+
+
+
+
+
+3.  	E-commerce Discount Calculation
+    In an e-commerce platform, discounts might be represented as percentages (stored as float or double).
+    However, when displaying the total price to the user, you may need to round off the final price to
+    a whole number (integer).
+
+ code : 
+
+import java.util.Scanner;
+
+public class UserInputExample{
+    public static void main(String[] args)
+    {
+        Scanner scanner0 = new Scanner(System.in);
+        System.out.println("Enter the price:");
+        double price = scanner0.nextDouble();
+        Scanner scanner1 = new Scanner(System.in); 
+        System.out.print("Enter the discount percentage:"); 
+        double discount = scanner1.nextDouble();
+        
+        double finalp0=price-(price*(discount/100)); 
+        int finalp1=(int) finalp0;
+        System.out.println("Final price:"+finalp1);
+    }
+}
+
+Output:
+    Enter the price: 199
+    Enter the discount percentage: 15
+    Final price: 169
+
+
+
+
+
+4.   Sensor Data Processing in IoT Devices
+    In IoT (Internet of Things) systems, sensors often provide data in large or precise formats like double (e.g., temperature or pressure), but the system may need to process this data as smaller types like int to save memory or bandwidth.
+    import java.util.Scanner;
+   Code : 
+public class UserInputExample{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Enter the sensor data:"); 
+        double data0 = scanner.nextDouble(); 
+        scanner.close();
+        
+        int data1 = (int) data0;
+        
+        System.out.println("Data Stored:"+data1);
+    }
+}
+ 
+Output:
+    Enter the sensor data: 15.5 
+    Data Stored:15
+
