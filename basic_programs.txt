@@ -1,0 +1,96 @@
+Java Programs 
+
+			
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception{
+        
+        Scanner myObj = new Scanner(System.in);
+        
+        // 1. Program to add 2 numbers
+        System.out.println("Enter the first number:");
+        double Num1 = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the second number:");
+        double Num2 = Double.parseDouble(myObj.nextLine());
+        System.out.println("Sum = " + (Num1 + Num2));
+        
+        // 2. Program to subtract 2 numbers
+        System.out.println("Subtraction = " + Num1 + " - " + Num2 + " = " + (Num1 - Num2));
+        
+        // 3. Program to multiply 2 numbers
+        System.out.println("Multiplication of " + Num1 + " x " + Num2 + " = " + (Num1 * Num2));
+        
+        // 4. Program to check if the number is odd or even
+        if (Num1 % 2 == 0) {
+            System.out.println(Num1 + " is even");
+        } else {
+            System.out.println(Num1 + " is odd");
+        }
+
+        // Odd-even using ternary operator:
+        System.out.println(Num2 + (Num2 % 2 == 0 ? " is even." : " is odd."));
+        
+        // 5. Check whether a character is a vowel or consonant
+        System.out.println("Enter a character to check vowels: ");
+        String CheckStr = myObj.nextLine();
+        if (CheckStr.equalsIgnoreCase("a") || CheckStr.equalsIgnoreCase("e") || CheckStr.equalsIgnoreCase("i") ||
+            CheckStr.equalsIgnoreCase("o") || CheckStr.equalsIgnoreCase("u")) {
+            System.out.println("Character is a Vowel.");
+        } else {
+            System.out.println("Character is a consonant.");
+        }
+        
+        // 6. Calculate the average of 2 numbers
+        System.out.println("Enter the first number for average calculation:");
+        double Num3 = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the second number for average calculation:");
+        double Num4 = Double.parseDouble(myObj.nextLine());
+        double avg = (Num3 + Num4) / 2;
+        System.out.println("Average of 2 numbers is: " + avg);
+        
+        // 7. Calculate the average of 3 numbers
+        System.out.println("Enter the third number for average calculation:");
+        double Num5 = Double.parseDouble(myObj.nextLine());
+        avg = (Num3 + Num4 + Num5) / 3;
+        System.out.println("Average of 3 numbers is: " + avg);
+        
+        // 8. Area of a rectangle
+        System.out.println("Enter the length of the rectangle:");
+        double len = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the width of the rectangle:");
+        double wid = Double.parseDouble(myObj.nextLine());
+        double area = len * wid;
+        System.out.println("Area of the rectangle is: " + area);
+        
+        // 9. Simple Interest Calculation
+        System.out.println("Enter the principal amount:");
+        double principal = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the rate of interest:");
+        double rate = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the time period (in years):");
+        double time = Double.parseDouble(myObj.nextLine());
+        double SI = (principal * time * rate) / 100;
+        System.out.println("Simple Interest = " + SI);
+        
+        // 10. Compound Interest Calculation (New Input)
+        System.out.println("Enter the principal amount for compound interest calculation:");
+        principal = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the rate of interest (annual) for compound interest calculation:");
+        rate = Double.parseDouble(myObj.nextLine());
+        System.out.println("Enter the time period (in years) for compound interest calculation:");
+        time = Double.parseDouble(myObj.nextLine());
+        
+        // Compound Interest formula
+        double amount = principal * Math.pow((1 + rate / 100), time);  // Amount = P(1 + r/100)^t
+        double compoundInterest = amount - principal;  // CI = Amount - Principal
+        System.out.println("Compound Interest = " + compoundInterest);
+        System.out.println("Total Amount (Principal + Interest) = " + amount);
+
+        
+    }
+}
+
+
+
