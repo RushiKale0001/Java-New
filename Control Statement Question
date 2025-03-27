@@ -1,0 +1,60 @@
+Alright, here are 50 coding questions covering various control flow statements (conditionals, loops, and sometimes combinations), designed to increase in complexity:
+
+**Conditional Statements (if/else, switch/case)**
+
+1.  Even or Odd: Determine if a given integer is even or odd.
+2.  Positive, Negative, or Zero: Classify a number as positive, negative, or zero.
+3.  Largest of Two Numbers: Find the larger of two given integers.
+4.  Vowel or Consonant: Check if a character is a vowel or consonant.
+5.  Leap Year: Determine if a year is a leap year.
+6.  Grade Calculator: Assign a letter grade based on a numerical score.
+7.  Absolute Value: Calculate the absolute value of a number.
+8.  Divisibility: Check if a number is divisible by another.
+9.  Triangle Validity: Determine if three lengths form a valid triangle.
+10. Simple Calculator: Implement basic arithmetic operations (+, -, \*, /).
+11. Largest of Three Numbers: Find the largest of three numbers.
+12. Quadratic Roots: Calculate the roots of a quadratic equation.
+13. Day of Week: Given a number, print the day of the week.
+14. Month Name: Given a number, print the month name.
+15. Triangle Type: Classify a triangle as equilateral, isosceles, or scalene.
+16. Range Check: Check if a number is within a given range.
+17. Simple ATM: Simulate basic ATM operations.
+18. Password Strength: Check password strength based on criteria.
+19. Shipping Cost: Calculate shipping costs based on weight and destination.
+20. Discount Calculation: Apply discounts based on purchase amount.
+
+**Loops (for, while, do-while)**
+
+21. Print Numbers: Print numbers from 1 to 10.
+22. Sum of Numbers: Calculate the sum of numbers from 1 to n.
+23. Factorial: Calculate the factorial of a number.
+24. Multiplication Table: Print the multiplication table of a number.
+25. Reverse Number: Reverse the digits of a number.
+26. Palindrome Check: Check if a number or string is a palindrome.
+27. Fibonacci Sequence: Generate the Fibonacci sequence up to n terms.
+28. Prime Number Check: Check if a number is prime.
+29. Prime Numbers in Range: Print prime numbers within a range.
+30. Armstrong Number: Check if a number is an Armstrong number.
+31. Count Digits: Count the number of digits in a number.
+32. Sum of Digits: Calculate the sum of digits in a number.
+33. Pattern Printing (Simple): Print basic patterns using loops.
+34. Power of a Number: Calculate the power of a number.
+35. Greatest Common Divisor (GCD): Find the GCD of two numbers.
+36. Least Common Multiple (LCM): Find the LCM of two numbers.
+37. Average of Numbers: Calculate the average of a series of numbers.
+38. Find Maximum: Find the maximum value in a list of numbers.
+39. Find Minimum: Find the minimum value in a list of numbers.
+40. Search Element: Search for an element in an array.
+
+**Combinations and More Complex Control Flow**
+
+41. Sudoku Row/Column Check: Check if a row or column is valid in Sudoku.
+42. Equation Solver (Linear): Solve a linear equation.
+43. Equation Solver (Quadratic): Solve a quadratic equation.
+44. Time Interval Overlap: Check if two time intervals overlap.
+45. Polygon Area: Calculate the area of a polygon based on sides.
+46. Traffic Light Simulation: Simulate a traffic light.
+47. Text Parser: Parse a string and extract specific information.
+48. Game State Check: Determine the game state (win, lose, draw).
+49. Simple Regex Match: Implement a simplified regex match.
+50. Card Game Logic: Implement part of a card game's logic.
