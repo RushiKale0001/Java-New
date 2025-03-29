@@ -14,8 +14,8 @@ class Main {
     public static void main(String[] args) throws IOException {
 
         
-        Main myObj1 = new Main();
-        System.out.println("Name obtained By Default Constructor : " + myObj1.name1 );
+        Main myObj01 = new Main();
+        System.out.println("Name obtained By Default Constructor : " + myObj01.name1 );
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         
@@ -27,9 +27,13 @@ class Main {
         
         
         // Pass argument to parameters in constructer of that object class
-        Main2 myObj2 = new Main2(name, Integer.parseInt(year));
-        
-        System.out.println("Name obtained By Parametric Constructor : " + myObj2.name2 + myObj2.YearOfBirth + " \n\n" );
+        Main2 myObj1 = new Main2(name, Integer.parseInt(year));
+        System.out.println("\nUserName obtained By Parametric Constructor : " + myObj1.name2 + myObj1.YearOfBirth + " \n" );
+
+
+      // Pass 'object' of same class as argument to initilise copy constructer of that same class ,
+         Main2 myObj2 = new Main2(myObj1);
+         System.out.println("UserName obtained By copy Constructor : " + myObj2.name2 + myObj2.YearOfBirth + " \n\n" );
     
 
         int num1, num2;
@@ -92,12 +96,17 @@ class Main2{
     String name2 ;
     int YearOfBirth; 
     public Main2(String name, int year){ 
-        name2 = name ; 
-        YearOfBirth = year; 
+        this.name2 = name ; 
+        this.YearOfBirth = year; 
         
     }
+    public Main2(Main2 obj){ 
+        this.name2 = obj.name2 ; 
+        this.YearOfBirth = obj.YearOfBirth; 
+        
+    }
+    
 } 
-
 
 class Product {
     int product;
