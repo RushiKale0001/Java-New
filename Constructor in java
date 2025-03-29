@@ -1,0 +1,132 @@
+
+import java.io.*;
+
+class Main {
+    String name1 ;
+    int sum , product ,division ;
+    
+    
+    
+    public Main(){
+    name1 = "Java" ;
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        
+        Main myObj1 = new Main();
+        System.out.println("Name obtained By Default Constructor : " + myObj1.name1 );
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
+
+        System.out.println("Enter your name: ");
+        String name = reader.readLine();
+        System.out.println("Enter your Year of Birth: ");
+        String year = reader.readLine();
+        
+        
+        // Pass argument to parameters in constructer of that object class
+        Main2 myObj2 = new Main2(name, Integer.parseInt(year));
+        
+        System.out.println("Name obtained By Parametric Constructor : " + myObj2.name2 + myObj2.YearOfBirth + " \n\n" );
+    
+
+        int num1, num2;
+
+        Product prd;
+        Division div;
+        Sum sumit;
+        Subtract sub;
+
+        System.out.println("Enter your num 1: ");
+        num1 = Integer.parseInt(reader.readLine());
+        System.out.println("Enter your num 2: ");
+        num2 = Integer.parseInt(reader.readLine());
+
+        char operation = 'a'; // Initial value
+
+        while (operation != '0') {
+            
+            System.out.print("Enter an operation (+ for Sum, - for Subtract, * for Product, / for Division, 0 to Exit):  ");
+            operation = (char) reader.read();
+            reader.readLine(); // Clear the buffer
+
+            switch (operation) {
+                case '+':
+                    sumit = new Sum(num1, num2);
+                    System.out.println("Sum gives: " + sumit.sum);
+                    break;
+                case '-':
+                    sub = new Subtract(num1, num2);
+                    System.out.println("Subtraction gives: " + sub.subtract);
+                    break;
+                case '*':
+                    prd = new Product(num1, num2);
+                    System.out.println("Product gives: " + prd.product);
+                    break;
+                case '/':
+                    if (num2 != 0) {
+                        div = new Division(num1, num2);
+                        System.out.println("Division gives: " + div.division);
+                    } else {
+                        System.out.println("Division by zero is not allowed!");
+                    }
+                    break;
+                case '0':
+                    System.out.println("Exiting the program...");
+                    break;
+                default:
+                    System.out.println("Invalid operation!");
+            }
+            System.out.println("Current operation ... (" + operation + ")");
+            System.out.println("\n____________________________________________________\n");
+            
+        }
+
+        System.out.println("Thank you for using the program!");
+    }
+}
+
+class Main2{ 
+    String name2 ;
+    int YearOfBirth; 
+    public Main2(String name, int year){ 
+        name2 = name ; 
+        YearOfBirth = year; 
+        
+    }
+} 
+
+
+class Product {
+    int product;
+
+    public Product(int num1, int num2) {
+        product = num1 * num2;
+    }
+}
+
+class Division {
+    double division;
+
+    public Division(int num1, int num2) {
+        division = (double) num1 / num2;
+    }
+}
+
+class Sum {
+    int sum;
+
+    public Sum(int num1, int num2) {
+        sum = num1 + num2;
+    }
+}
+
+class Subtract {
+    int subtract;
+
+    public Subtract(int num1, int num2) {
+        subtract = num1 - num2;
+    }
+}
